@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./Style/index.css">
+  <title>Frontend Mentor | Intro component with signup</title>
+
+</head>
+
+<body>
+  <main class="main-container">
+
+    <div class="left-container">
+      <H1>Learn to code by watching others </H1>
+      <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but
+        understanding how developers think is invaluable</p>
+    </div>
+    <div class="right-container">
+      <button class="register-plan">Try it free 7 days <span> then $20/mo. thereafter</span></button>
+
+      <form action="">
+        <div class="flexbox">
+          <div class="firstname-container">
+            <input type="text" autocomplete="off" id="firstname" placeholder="First name">
+            <span></span>
+          </div>
+
+          <div class="lastname-container">
+            <input type="text" autocomplete="off" id="lastname" placeholder="Last name">
+            <span></span>
+          </div>
+
+          <div class="email-container">
+            <input type="text" autocomplete="off" id="email" placeholder="Email adress">
+            <span></span>
+          </div>
+
+          <div class="password-container">
+            <input type="password" autocomplete="off" id="password" placeholder="Password">
+            <div id="progress-bar"></div>
+            <span></span>
+          </div>
+        </div>
+
+        <input id="submit" type="submit" value="claim your free trial">
+        <div class="term">By clicking the button, you are agreeing to our<div class="red">Terms and services</div>
+        </div>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <div class=" attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/Stv-devl">Steven-Dev</a>.
+    </div>
+  </footer>
+  <script src="./index.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,250 @@
+/**********************************************************************/
+/*Main*/
+/**********************************************************************/
+
+/*Grid 50% & 50% for 2 containers, and center elements*/
+main {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  justify-content: center;
+  justify-items: start;
+  min-height: 100vh;
+
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: 45% 55%;
+  }
+
+  @media screen and (max-width: 1050px) {
+    grid-template-columns: 40% 60%;
+  }
+  @media screen and (max-width: 950px) {
+    display: flex;
+    flex-direction: column;
+  }
+  /*container left with title and txt*/
+  .left-container {
+    text-align: left;
+
+    @media screen and (max-width: 950px) {
+      text-align: center;
+    }
+
+    h1 {
+      line-height: 45px;
+      font-size: 2.3rem;
+      margin-bottom: 20px;
+      padding: 0 20% 0 20%;
+
+      @media screen and (max-width: 1200px) {
+        padding: 0 10% 0 10%;
+        font-size: 1.8rem;
+      }
+
+      @media screen and (max-width: 950px) {
+        padding: 0 10% 0 10%;
+        margin-bottom: 30px;
+      }
+    }
+
+    p {
+      padding: 0 20% 0 20%;
+
+      @media screen and (max-width: 1200px) {
+        padding: 0 10% 0 10%;
+        font-size: 0.9rem;
+
+        @media screen and (max-width: 950px) {
+          padding: 0 15% 7% 15%;
+        }
+      }
+    }
+  }
+  /*container right with form*/
+  .right-container {
+    display: block;
+
+    .register-plan {
+      background: $blue;
+      color: rgb(255, 255, 255);
+      font-size: 1rem;
+      letter-spacing: 1px;
+      font-weight: 700;
+      width: 540px;
+      height: 60px;
+      border: none;
+      border-radius: 7px;
+      box-shadow: 0px 8px 0px 0px hsla(249, 10%, 26%, 0.3);
+      margin-bottom: 25px;
+      cursor: pointer;
+
+      @media screen and (max-width: 600px) {
+        padding: 0 5px 0 5px;
+        width: 90%;
+        height: 120px;
+      }
+
+      span {
+        font-size: 0.95rem;
+        font-weight: 400;
+      }
+    }
+
+    form {
+      background: rgb(250, 250, 250);
+      border-radius: 7px;
+      width: 540px;
+      height: 475px;
+      box-shadow: 0px 8px 0px 0px hsla(249, 10%, 26%, 0.3);
+      padding-top: 35px;
+      margin: 0 auto;
+
+      @media screen and (max-width: 600px) {
+        padding-top: 20px;
+        width: 90%;
+        height: 444px;
+      }
+
+      .flexbox {
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+
+        @media screen and (max-width: 600px) {
+          row-gap: 20px;
+          margin-top: 15px;
+        }
+        input[type="text"],
+        input[type="password"] {
+          border: 1px solid $grayishBlue;
+          background: none;
+          height: 50px;
+          width: 85%;
+          border-radius: 5px;
+          padding-left: 32px;
+          font-weight: 600;
+          transition: 0.2s;
+
+          &:focus {
+            border: 1.5px solid $blue;
+          }
+
+          @media screen and (max-width: 600px) {
+            height: 40px;
+          }
+        }
+      }
+
+      input[type="submit"] {
+        border: 2px solid rgba(4, 84, 49, 0.2);
+        background: $green;
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        height: 54px;
+        width: 85%;
+        border-radius: 5px;
+        margin: 0 auto;
+        cursor: pointer;
+        transition: 0.4s;
+        margin: 25px 0 10px 0;
+
+        &:hover {
+          background: hsl(154, 59%, 51%, 0.6);
+        }
+
+        @media screen and (max-width: 600px) {
+          margin: 35px 0 10px 0;
+          height: 45px;
+        }
+      }
+      span {
+        height: 0px;
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.4s;
+        color: $red;
+        font-size: 0.7rem;
+        text-align: right;
+        margin: 6px 45px 0 0;
+
+        @media screen and (max-width: 600px) {
+          text-align: center;
+          margin: 7px 20px 0 20px;
+          font-size: 0.6rem;
+        }
+      }
+
+      .term {
+        color: $grayishBlue;
+        font-size: 0.7rem;
+        font-weight: 600;
+
+        @media screen and (max-width: 950px) {
+          font-size: 0.6rem;
+          margin-bottom: 0px;
+          padding: 0 10%;
+        }
+
+        .red {
+          visibility: visible;
+          opacity: 1;
+          font-size: 0.7rem;
+          color: $red;
+          font-weight: 600;
+          cursor: pointer;
+          transition: 0.2s;
+
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+      /*For javacript*/
+      .error input {
+        color: red;
+        border: 1px solid rgba(255, 0, 0, 0.527);
+      }
+      .error span {
+        visibility: visible;
+        opacity: 1;
+        color: red;
+      }
+
+      .progressRed {
+        margin: 5px 0 2px 40px;
+        background: red;
+        height: 6px;
+        width: 20%;
+        visibility: visible;
+
+        @media screen and (max-width: 600px) {
+          margin: 5px 0 2px 7.5%;
+        }
+      }
+      .progressBlue {
+        margin: 5px 0 2px 40px;
+        background: #16d9e7;
+        height: 6px;
+        width: 55%;
+        visibility: visible;
+
+        @media screen and (max-width: 600px) {
+          margin: 5px 0 2px 7.5%;
+        }
+      }
+      .progressGreen {
+        margin: 5px 0 2px 40px;
+        height: 6px;
+        width: 85%;
+        background: #5ef9a4;
+        visibility: visible;
+
+        @media screen and (max-width: 600px) {
+          margin: 5px 0 2px 7.5%;
+        }
+      }
+    }
+  }
+}
