@@ -6,7 +6,7 @@ const inputs = document.querySelectorAll(
 const progressBar = document.getElementById("progress-bar");
 let firstname, lastname, email, password;
 
-//variable errorDisplay for doing only variables for all
+//variable errorDisplay for take care error and thanks message
 const errorDisplay = (tag, message, valid) => {
   const container = document.querySelector("." + tag + "-container");
   const span = document.querySelector("." + tag + "-container > span");
@@ -69,7 +69,7 @@ const emailChecker = (value) => {
   }
 };
 
-//variable for check password
+//variable for check password with progress bar
 const passwordChecker = (value) => {
   progressBar.classList = "";
   if (
