@@ -162,12 +162,15 @@ main .right-container form .flexbox input[type=text],
 main .right-container form .flexbox input[type=password] {
   border: 1px solid hsl(246deg, 25%, 77%);
   background: none;
+  background-image: url(..//..//images/icon-error.svg) hidden;
+  background-position: 420px 12px;
+  background-repeat: no-repeat;
   height: 50px;
   width: 85%;
   border-radius: 5px;
   padding-left: 32px;
   font-weight: 600;
-  transition: 0.2s;
+  transition: 0.4s ease-in;
 }
 main .right-container form .flexbox input[type=text]:focus,
 main .right-container form .flexbox input[type=password]:focus {
@@ -244,9 +247,15 @@ main .right-container form .term .red {
 main .right-container form .term .red:hover {
   transform: scale(1.05);
 }
-main .right-container form .error input {
+main .right-container form .error input[type=text] {
   color: red;
-  border: 1px solid rgba(255, 0, 0, 0.527);
+  border: 1px solid red;
+  background-image: url(..//..//images/icon-error.svg);
+}
+main .right-container form .error input[type=password] {
+  color: red;
+  border: 1px solid red;
+  background-image: url(..//..//images/icon-error.svg);
 }
 main .right-container form .error span {
   visibility: visible;

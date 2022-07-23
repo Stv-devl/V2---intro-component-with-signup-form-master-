@@ -118,12 +118,15 @@ main {
         input[type="password"] {
           border: 1px solid $grayishBlue;
           background: none;
+          background-image: url(..//..//images/icon-error.svg) hidden;
+          background-position: 420px 12px;
+          background-repeat: no-repeat;
           height: 50px;
           width: 85%;
           border-radius: 5px;
           padding-left: 32px;
           font-weight: 600;
-          transition: 0.2s;
+          transition: 0.4s ease-in;
 
           &:focus {
             border: 1.5px solid $blue;
@@ -202,9 +205,16 @@ main {
         }
       }
       /*For javacript*/
-      .error input {
+
+      .error input[type="text"] {
         color: red;
-        border: 1px solid rgba(255, 0, 0, 0.527);
+        border: 1px solid red;
+        background-image: url(..//..//images/icon-error.svg);
+      }
+      .error input[type="password"] {
+        color: red;
+        border: 1px solid red;
+        background-image: url(..//..//images/icon-error.svg);
       }
       .error span {
         visibility: visible;
